@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tugas Praktikum SIG Web Leaflet JavaScript</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="plugin/leaflet-routing-machine-3.2.12/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.83.1/dist/L.Control.Locate.min.css" />
+    <style>
+        .map {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Peta Rute dari Lokasi Pengguna Menuju Lokasi Wisata di Kabupaten Bantul</h1>
+    <div id="map" class="map"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="plugin/leaflet-routing-machine-3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.83.1/dist/L.Control.Locate.min.js"></script>
+
+    <script>
+        // Inisialisasi peta
+        const map = L.map('map').setView([-7.7956, 110.3695], 13);
+        
+        // Tambahkan tile layer dari OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Tambahkan kontrol geolokasi
+        L.control.locate().addTo(map);
+
+        // Event saat lokasi ditemukan
+        map.on('locationfound', function(e) {
+    
+    
+        // Tambahkan marker dengan popup
+        window.userMarker = L.marker(e.latlng)
+            .addTo(map)
+            .bindPopup(`<b>Lokasi Anda:</b><br>Lat: ${e.latitude.toFixed(5)}, Lng: ${e.longitude.toFixed(5)}`)
+            .openPopup();
+        });
+
+        // Tambahkan rute menggunakan Leaflet Routing Machine
+        const routingControl = L.Routing.control({
+            waypoints: [
+                L.latLng(-7.7956, 110.3695), // Titik awal (Yogyakarta)
+                L.latLng(-7.7500, 110.4100)  // Titik tujuan (sekitar)
+            ],
+            routeWhileDragging: true,
+            createMarker: function(i, waypoint, n) {
+                let marker = L.marker(waypoint.latLng, {
+                    draggable: true
+                });
+                marker.bindPopup(i === 0 ? "<b>Lokasi Awal</b>" : i === n - 1 ? "<b>Lokasi Tujuan</b>" : "<b>Waypoint</b>").openPopup();
+                return marker;
+            }
+        }).addTo(map);
+
+        // Buat custom icon
+        var customIcon = L.icon({
+            iconUrl: 'assets/marker-svgrepo-com (1).svg', // Ganti dengan path gambar Anda
+            iconSize: [45, 45],         // Ukuran ikon (width, height)
+            iconAnchor: [16, 32],       // Anchor icon (agar berada di titik tengah bawah)
+            popupAnchor: [0, -32]       // Anchor popup
+        });
+
+        // List tempat wisata
+        var marker = L.marker([-8.01743, 110.31765], { icon: customIcon })
+            .bindPopup('<b>Gumuk Pasir</b>')
+            .addTo(map)
+            .openPopup();
+        var marker = L.marker([-8.02736, 110.33706], { icon: customIcon })
+            .bindPopup('<b>Pantai Parangtritis</b>')
+            .addTo(map)
+            .openPopup();
+        var marker = L.marker([-8.01417, 110.29302], { icon: customIcon })
+            .bindPopup('<b>Pantai Depok</b>')
+            .addTo(map)
+            .openPopup();
+        var marker = L.marker([-8.02282, 110.3236], { icon: customIcon })
+            .bindPopup('<b>Pantai Parangkusumo</b>')
+            .addTo(map)
+            .openPopup();
+        var marker = L.marker([-7.87166, 110.42632], { icon: customIcon })
+            .bindPopup('<b>Puncak Sosok</b>')
+            .addTo(map)
+            .openPopup();
+        var marker = L.marker([-7.92597, 110.43085], { icon: customIcon })
+            .bindPopup('<b>Hutan Pinus Sari</b>')
+            .addTo(map)
+            .openPopup();
+        var marker = L.marker([-7.82829, 110.3998], { icon: customIcon })
+            .bindPopup('<b>Kotagede</b>')
+            .addTo(map)
+            .openPopup();
+        var marker = L.marker([-7.87526, 110.38029], { icon: customIcon })
+            .bindPopup('<b>Stadion Sultan Agung</b>')
+            .addTo(map)
+            .openPopup();
+        var marker = L.marker([-7.91484, 110.43558], { icon: customIcon })
+            .bindPopup('<b>Bukit Lintang Sewu</b>')
+            .addTo(map)
+            .openPopup();
+        var marker = L.marker([-7.86183, 110.31465], { icon: customIcon })
+            .bindPopup('<b>Gua Selarong</b>')
+            .addTo(map)
+            .openPopup();
+    </script>
+</body>
+</html>

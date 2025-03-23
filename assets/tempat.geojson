@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"name": "tempat",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32749" } },
+"features": [
+{ "type": "Feature", "properties": { "No": 1, "Nama": "Gumuk Pasir", "X": 424807, "Y": 9113713 }, "geometry": { "type": "Point", "coordinates": [ 424807.0, 9113713.0 ] } },
+{ "type": "Feature", "properties": { "No": 2, "Nama": "Pantai Parangtritis", "X": 426948, "Y": 9112618 }, "geometry": { "type": "Point", "coordinates": [ 426948.0, 9112618.0 ] } },
+{ "type": "Feature", "properties": { "No": 3, "Nama": "Pantai Depok", "X": 422092, "Y": 9114069 }, "geometry": { "type": "Point", "coordinates": [ 422092.0, 9114069.0 ] } },
+{ "type": "Feature", "properties": { "No": 4, "Nama": "Pantai Parangkusumo", "X": 425464, "Y": 9113118 }, "geometry": { "type": "Point", "coordinates": [ 425464.0, 9113118.0 ] } },
+{ "type": "Feature", "properties": { "No": 5, "Nama": "Puncak Sosok", "X": 436760, "Y": 9129847 }, "geometry": { "type": "Point", "coordinates": [ 436760.0, 9129847.0 ] } },
+{ "type": "Feature", "properties": { "No": 6, "Nama": "Hutan Pinus Sari", "X": 437268, "Y": 9123844 }, "geometry": { "type": "Point", "coordinates": [ 437268.0, 9123844.0 ] } },
+{ "type": "Feature", "properties": { "No": 7, "Nama": "Kotagede", "X": 433830, "Y": 9134638 }, "geometry": { "type": "Point", "coordinates": [ 433830.0, 9134638.0 ] } },
+{ "type": "Feature", "properties": { "No": 8, "Nama": "Stadion Sultan Agung", "X": 431687, "Y": 9129442 }, "geometry": { "type": "Point", "coordinates": [ 431687.0, 9129442.0 ] } },
+{ "type": "Feature", "properties": { "No": 9, "Nama": "Bukit Lintang Sewu", "X": 437788, "Y": 9125075 }, "geometry": { "type": "Point", "coordinates": [ 437788.0, 9125075.0 ] } },
+{ "type": "Feature", "properties": { "No": 10, "Nama": "Gua Selarong", "X": 424448, "Y": 9130915 }, "geometry": { "type": "Point", "coordinates": [ 424448.0, 9130915.0 ] } }
+]
+}

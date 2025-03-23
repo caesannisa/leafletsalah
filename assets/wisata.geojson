@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"name": "wisata",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32749" } },
+"features": [
+{ "type": "Feature", "properties": { "No": 1, "Nama": "Gumuk Pasir", "Lat": 8.01743, "Long": 110.31765, "X": 424807, "Y": 9113713 }, "geometry": { "type": "Point", "coordinates": [ 424807.0, 9113713.0 ] } },
+{ "type": "Feature", "properties": { "No": 2, "Nama": "Pantai Parangtritis", "Lat": 8.02736, "Long": 110.33706, "X": 426948, "Y": 9112618 }, "geometry": { "type": "Point", "coordinates": [ 426948.0, 9112618.0 ] } },
+{ "type": "Feature", "properties": { "No": 3, "Nama": "Pantai Depok", "Lat": 8.01417, "Long": 110.29302, "X": 422092, "Y": 9114069 }, "geometry": { "type": "Point", "coordinates": [ 422092.0, 9114069.0 ] } },
+{ "type": "Feature", "properties": { "No": 4, "Nama": "Pantai Parangkusumo", "Lat": 8.02282, "Long": 110.3236, "X": 425464, "Y": 9113118 }, "geometry": { "type": "Point", "coordinates": [ 425464.0, 9113118.0 ] } },
+{ "type": "Feature", "properties": { "No": 5, "Nama": "Puncak Sosok", "Lat": 7.87166, "Long": 110.42632, "X": 436760, "Y": 9129847 }, "geometry": { "type": "Point", "coordinates": [ 436760.0, 9129847.0 ] } },
+{ "type": "Feature", "properties": { "No": 6, "Nama": "Hutan Pinus Sari", "Lat": 7.92597, "Long": 110.43085, "X": 437268, "Y": 9123844 }, "geometry": { "type": "Point", "coordinates": [ 437268.0, 9123844.0 ] } },
+{ "type": "Feature", "properties": { "No": 7, "Nama": "Kotagede", "Lat": 7.82829, "Long": 110.3998, "X": 433830, "Y": 9134638 }, "geometry": { "type": "Point", "coordinates": [ 433830.0, 9134638.0 ] } },
+{ "type": "Feature", "properties": { "No": 8, "Nama": "Stadion Sultan Agung", "Lat": 7.87526, "Long": 110.38029, "X": 431687, "Y": 9129442 }, "geometry": { "type": "Point", "coordinates": [ 431687.0, 9129442.0 ] } },
+{ "type": "Feature", "properties": { "No": 9, "Nama": "Bukit Lintang Sewu", "Lat": 7.91484, "Long": 110.43558, "X": 437788, "Y": 9125075 }, "geometry": { "type": "Point", "coordinates": [ 437788.0, 9125075.0 ] } },
+{ "type": "Feature", "properties": { "No": 10, "Nama": "Gua Selarong", "Lat": 7.86183, "Long": 110.31465, "X": 424448, "Y": 9130915 }, "geometry": { "type": "Point", "coordinates": [ 424448.0, 9130915.0 ] } }
+]
+}
